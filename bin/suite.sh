@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd `dirname $0`
+
 source func.sh
 
 board="654321"
@@ -12,5 +14,5 @@ echo $(assert $(getcell $board 0 0) "6")
 echo $(assert $(neighbors $board 0 0) "532")
 echo expr $[++z]
 echo $z
-./tester.sh dead.in dead.out 
-./tester.sh lonely.in dead.out
+./tester.sh ../inputs/dead.in ../outputs/dead.out 
+./tester.sh ../inputs/lonely.in ../outputs/dead.out
